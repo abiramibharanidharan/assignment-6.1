@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+     <head>
+            <meta charset="UTF-8">
+            <title>Assignment 6.1</title>
+            <style>
+                    /* to create the div box style*/
+                    div {
+                           width:400px;
+                           height:200px;
+                           margin:0;
+                           padding:1px;
+                           border:3px solid red;
+                           background-color:blue;
+                           color:white;
+                        }
+            </style>
+            <script>                         
+                  /* get the employee value from input and calculate new salary */
+                      function employee()
+                      {
+                          var name=document.getElementById("name").value;
+                          var salary=parseInt(document.getElementById("salary").value);
+                          var workhour=parseInt(document.getElementById("workhour").value);
+                          var nsalary;
+                          if(salary>=15000 && workhour>=10)
+                           {
+                                nsalary=salary+(salary/100*10);                                                             
+                                document.getElementById("label2").innerHTML = "Name :"+ name ;
+                                document.getElementById("label3").innerHTML = "Salery :" + nsalary ;
+                                document.getElementById("label4").innerHTML = "Workhour  :" + workhour ;
+                            }
+                            else
+                            {
+                                 nsalary=salary+(salary/100*5);
+                                 document.getElementById("label2").innerHTML = "Name :"+ name ;
+                                 document.getElementById("label3").innerHTML = "Salery :" + nsalary ;
+                                 document.getElementById("label4").innerHTML = "Workhour  :" + workhour ;
+                             }
+                       }
+
+              </script>
+        
+        </head>
+        <body>
+                 <p>Enter name of employee </p>
+                 <input type="text" id="name"/></br>
+
+                  <p>Enter salary of employee </p>
+                 <input type="text" id="salary"/></br>
+
+                 <p>Enter workhour of employee</p>
+                 <input type="text" id="workhour"/></br>
+
+                 <button onclick="employee()">calculate</button></br></br></br>
+
+                 <div>
+                         <h2>Employee Detail</h2></br>
+
+                         <label id="label2"></label>
+                          </br></br>
+
+                          <label id="label3"></label>
+                          </br></br>
+
+                          <label id="label4"></label>
+                 </div>
+          </body>
+</html>
+              
